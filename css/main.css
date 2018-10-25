@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  color: #c2c2c2;
+}
+
+a {
+  background-color: rgba(118, 117, 128, 0.07);
+  color: #a19f9f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  background-color: rgba(118, 117, 128, 0.15);
+  color: #ec5a62;
+}
+
+.search {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.search__input {
+  display: inline-block; 
+  width: calc(100% - 100px);
+  color: #ec5a62;
+  font-weight: bold;
+  font-size: 100px;
+  background-color: inherit;
+  border: none;
+}
+
+.search__input::placeholder {
+  color: #c2c2c2;
+}
+
+.search__input:focus {
+  outline: none;
+}
+
+.search__btn {
+  display: inline-block;
+  padding: 10px;
+  width: 100px;
+  transition: padding .2s linear;
+  cursor: pointer;
+}
+
+.search__btn:hover {
+  padding: 0;
+  transition: padding .2s linear;
+}
+
+
+/* avoid space between inline-block elements */
+.search .wrapper {
+  font-size: 0;  
+  margin-bottom: 50px;
+  /* border: 1px solid black; */
+}
+
+.result__block {
+  display: inline-block;
+  width: 30%;
+  font-size: 1rem;
+  vertical-align: top;
+  margin-bottom: 50px;
+  margin-right: 5%;
+  /* border: 1px solid blue; */
+}
+
+.result__block:last-child {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.result__block-title {
+  margin: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.result__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /* border: 1px solid orange; */
+}
+
+.result__list-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5px;
+  height: 70px;
+}
+
+.result__list-item img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.result__block:first-child img {
+  border-radius: 50%;
+}
+
+.result__list-item a {
+  display: block;
+  position: relative;
+  padding: 10px 10px 10px 75px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+.result__list-item span {
+  position: absolute;
+  top: 50%;
+  left: 75px;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 800px) {
+  .result__block {
+    width: 100%;
+  }
+}
